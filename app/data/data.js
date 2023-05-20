@@ -1,13 +1,3 @@
-import tour1 from "../images/tour-1.jpg";
-import tour2 from "../images/tour-7.jpeg";
-import tour3 from "../images/tour-3.jpg";
-import tour4 from "../images/tour-4.jpeg";
-// import tour5 from "./images/tour-5.jpeg";
-// import tour6 from "./images/tour-6.jpeg";
-// import tour7 from "./images/tour-7.jpeg";
-import tour8 from "../images/tour-8.jpg";
-import tour10 from "../images/tour-10.jpg";
-
 export const pageLinks = [
   { id: 1, href: "#home", text: "home" },
   { id: 2, href: "#about", text: "about" },
@@ -55,7 +45,7 @@ export const services = [
 export const tours = [
   {
     id: 101,
-    image: tour1,
+    image: "/images/tour-1.jpg",
     date: "Advanced Package",
     title: "Puerto Rico Islands",
     info: `Traveling to Puerto Rico is less difficult than you might think. Citizens of the United States do not need a passport. Puerto Rico, a strong and utterly resilient island, is as historic as it is scenic. The island is rich in natural beauty and unspoiled landscapes. White-sand beaches meet tropical rainforests that extend inland to the island's mountains. There are also three bioluminescent bays on the island, which is an experience in and of itself because this phenomenon is only found in a few places around the world.`,
@@ -65,7 +55,7 @@ export const tours = [
   },
   {
     id: 1,
-    image: tour2,
+    image: "/images/tour-7.jpeg",
     date: "Standard Package",
     title: "Tibet Adventure",
     info: `This journey into the Amdo Tibetan region provides an inside look at Tibetan life. Stay with a family in a small mountain village and get a firsthand look at their way of life. Enjoy their cuisine and try your hand at cooking alongside your hosts. This cultural tour will give you a much better understanding of Tibetan culture and lifestyle. This fascinating corner of China features colorful scenery and rich cultures that are seamlessly woven together into one beautiful tapestry in this mountainous region of Asia.`,
@@ -75,7 +65,7 @@ export const tours = [
   },
   {
     id: 201,
-    image: tour3,
+    image: "/images/tour-3.jpg",
     date: "Advanced Package",
     title: "Dominican Republic",
     info: `The Dominican Republic's beaches attract visitors from all over the world. As you take in the sights and sounds of the Dominican Republic, endless beaches blend with Merengue music. The Dominican Republic, a two-hour flight from Miami, has 1,000 miles of coastline and 250 miles of some of the Caribbean's best beaches.`,
@@ -85,7 +75,7 @@ export const tours = [
   },
   {
     id: 2,
-    image: tour8,
+    image: "/images/tour-8.jpg",
     date: "Advanced Package",
     title: "best of java",
     info: `On a spectacular 14-day journey from Jakarta to Ubud, get to know Indonesia from a different - and more varied - perspective. Discover Jakarta and Yogyakarta's current and cultural capitals, hike up Mt Bromo for epic views of the countryside, meander through the lush jungles of Seloliman Nature Reserve in search of local wildlife, and cross the ditch to Bali's north coast, with plenty of time to relax on the sandy beaches of Permuteran. Take the plunge and get to know some of Indonesia's hotspots in a more authentic way with this journey that takes you from city to coast, jungle to market, and temple to mountain.`,
@@ -105,7 +95,7 @@ export const tours = [
   // },
   {
     id: 301,
-    image: tour4,
+    image: "/images/tour-4.jpeg",
     date: "Premium Package",
     title: "Ultimate Kenya and Tanzania",
     info: `A super-luxurious safari that includes the "Best of the Best" of Kenya and Tanzania's wild wilderness. Expect incredible "Big Five" sightings in open-vehicle safaris, as well as the Samburu "Special Five," a unique game species. Explore the endless plains of the Serengeti, one of Africa's most important wildlife areas. Stop for sundowners as the sun sets over the African horizon. Relax in a beautiful spa while admiring the African savannahs.`,
@@ -125,7 +115,7 @@ export const tours = [
   // },
   {
     id: 102,
-    image: tour10,
+    image: "/images/tour-10.jpg",
     date: "Standard Package",
     title: "The Islands of Tahiti",
     info: `Travel to these beautiful islands with a vacation package that includes round-trip airfare from Los Angeles or Seattle. Relax in your overwater bungalow, stroll along the coral beaches, visit sacred ruins, learn about island culture through traditional Polynesian music and dance, and get up close and personal with ocean wildlife while snorkeling and diving.`,

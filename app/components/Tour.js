@@ -1,14 +1,12 @@
-import { useNavigate } from "react-router-dom";
-import { setTour } from "../redux/tourSlice";
-import { useDispatch } from "react-redux";
+"use client";
+import { useRouter } from "next/navigation";
 
 const Tour = ({ image, date, title, info, location, duration, cost }) => {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
+  const router = useRouter();
 
   const loadContact = (title, location, image) => {
-    dispatch(setTour({ title, location, image }));
-    navigate("/contact");
+    router.push(`/contacts/${title}`);
+    //router.push(`/contacts/abc`);
   };
 
   return (

@@ -1,8 +1,10 @@
 import Link from "next/link";
 import Title from "../components/Title";
+import NavbarWithoutLinks from "../components/NavbarWithoutLinks";
 const Privacy = () => {
   return (
     <>
+      <NavbarWithoutLinks />
       <section className="section" id="tours">
         <Title title="Privacy" subTitle="Policy" />
 

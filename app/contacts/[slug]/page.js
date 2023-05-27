@@ -41,7 +41,7 @@ function Contact() {
       to_address: email,
       //subject: `New Enquiry for the tour package - ${title}`,
     });
-    console.log(status);
+
     if (status === 1) {
       toast.success(
         `Enquiry sent successfully for the tour package '${tour.title}'`

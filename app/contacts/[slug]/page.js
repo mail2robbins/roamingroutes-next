@@ -18,7 +18,9 @@ function Contact() {
   const uid = params.slug;
   const router = useRouter();
 
-  const tour = tours.find((x) => x.title.toLowerCase() === uid.toLowerCase());
+  const tour = tours.find(
+    (x) => x.title.toLowerCase() === uid.replaceAll("%20", " ").toLowerCase()
+  );
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -49,7 +51,7 @@ function Contact() {
       <h3>&nbsp;</h3>
       <h3>Send Enquiry</h3>
       <div className="tour-img-container">
-        {/* <img src={tour.image} className="tour-img" alt={tour.title} /> */}
+        <img src={tour.image} className="tour-img" alt={tour.title} />
       </div>
       {/* name field */}
       {!values.isMember && (

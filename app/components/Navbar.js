@@ -10,9 +10,9 @@ const Navbar = () => {
       <div className="nav-center">
         <Logo />
 
-        {/* <PageLinks parentClass="nav-links" itemClass="nav-link" />
+        <PageLinks parentClass="nav-links" itemClass="nav-link" />
 
-        <ul className="nav-icons">
+        {/* <ul className="nav-icons">
           {socialLinks.map((link) => {
             return <SocialLink {...link} key={link.id} itemClass="nav-icon" />;
           })}

@@ -1,7 +1,7 @@
-import { socialLinks } from "../data";
+import Link from "next/link";
+import { socialLinks } from "../data/data";
 import PageLinks from "./PageLinks";
 import SocialLink from "./SocialLink";
-import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -13,7 +13,7 @@ const Footer = () => {
         })}
       </ul>
       <p className="copyright">
-        <Link to="/privacy" className="btn btn-hero">
+        <Link href="/privacy" className="btn btn-hero">
           Privacy
         </Link>
       </p>

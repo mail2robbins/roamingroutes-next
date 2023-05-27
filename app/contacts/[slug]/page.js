@@ -6,6 +6,9 @@ import { tours } from "../../data/data";
 import { useParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+import SendEmail from "../../../libraries/SendEmail";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 const initialState = {
   name: "",
@@ -24,12 +27,33 @@ function Contact() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    const { name, email } = values;
     if (!email || !name) {
       toast.error("Please Fill Out All Fields");
       return;
     }
-    toast.success(`Enquiry sent successfully for the tour package '${uid}'`);
-    router.push("/");
+
+    const { status } = await SendEmail({
+      from_name: name,
+      message: `I am interested in the tour package '${tour.title}' for location: ${tour.location}.`,
+      reply_to: "roaming.routes.tours@gmail.com",
+      to_name: email,
+      to_address: email,
+      //subject: `New Enquiry for the tour package - ${title}`,
+    });
+    console.log(status);
+    if (status === 1) {
+      toast.success(
+        `Enquiry sent successfully for the tour package '${tour.title}'`
+      );
+      setTimeout(() => {
+        router.push("/");
+      }, 5000);
+    } else {
+      toast.error(
+        `An error occured while sending the enquiry on the tour package '${tour.title}'`
+      );
+    }
   };
 
   const goBackHome = () => {
@@ -45,6 +69,7 @@ function Contact() {
 
   return (
     <form className="form" onSubmit={onSubmit}>
+      <ToastContainer />
       <div className="center-div">
         <Logo />
       </div>
@@ -53,6 +78,9 @@ function Contact() {
       <div className="tour-img-container">
         <img src={tour.image} className="tour-img" alt={tour.title} />
       </div>
+      <h4>&nbsp;</h4>
+      <h5>Package Name:</h5>
+      <h4>{tour.title}</h4>
       {/* name field */}
       {!values.isMember && (
         <FormRow

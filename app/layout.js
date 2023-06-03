@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
           crossorigin="anonymous"
         ></script>
       </head>
-      <body className={roboto.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
